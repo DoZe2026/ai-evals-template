@@ -1,39 +1,47 @@
-# Final Recommendation: Ship / Hold
+# Ship/Hold Memo · Ascend IQ
 
-> Module 6 · Culture · repo file; becomes the Ship/Hold slide of your final pitch deck
+> Repo file `ai-evals/06-culture/lab-1-ship-hold-memo.md`. A Pyramid-Principle executive memo: the recommendation comes **first**.
 >
-> The memo that ties it all together: given the evidence, do you ship, hold, or ship-with-conditions? This is your final pitch.
+> Fill this with the **Ship/Hold Memo Builder**, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
 
-## Recommendation
+> **Decision:** 🚀 SHIP _(or 🛑 HOLD)_
 
-> **Decision:** _SHIP / HOLD / SHIP WITH CONDITIONS_
+**To:** _[CPO] · cc Eng Lead · Trust & Safety_
+**From:** _[Your Name] · AI Evals Cohort · [Date]_
 
-_One paragraph: the decision and the single most important reason for it._
+## The Answer
 
-## 1. The evidence
+_First sentence = the recommendation and the business reason. Do not bury it._
 
-_Pull the key numbers from your eval suite and gates. Let the data carry the argument._
+## The Arguments
 
-| Metric | Result | Bar | Pass? |
-|---|---|---|---|
-| _…_ | _…_ | _…_ | _…_ |
+### 1. _Argument pillar title_
 
-## 2. Residual risk
+_…_
 
-_What still isn't covered? What could go wrong after launch, and how would you know?_
+### 2. _Argument pillar title_
 
-## 3. Conditions (if "ship with conditions")
+_…_
 
-_What must be true to ship, and what's monitored after?_
+### 3. _Argument pillar title_
 
-## 4. The pitch
+_…_
 
-_3 to 5 sentences you'd say to a VP to get a ship/hold decision. Confident, evidence-led, honest about risk._
+## Evidence · Trust Metrics
 
-## 5. What I learned
+```
+- Metric: result (Gate: bar) PASS/FAIL · Source
+- … cite exact numbers from M2–M5 (hallucination rate vs gate, factual grounding %, bias coverage %, p95 latency)
+```
 
-_The biggest shift in how you think about evaluating AI products from this certification._
+## Business Risk
 
-## Link to final deck
+_Quantified SHIP-path vs HOLD-path risk (revenue, churn, competitive window)._
 
-_[link]_
+## Next Step · Decision Needed
+
+_A specific decision request with a deadline — e.g. "Approve the Hold rollback by Friday to keep the Q3 launch window."_
+
+## Reflection
+
+_What defining "good enough" forced you to confront._

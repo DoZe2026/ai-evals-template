@@ -1,52 +1,29 @@
-# First LLM-as-a-Judge Eval — Module 1
+# First LLM-as-a-Judge Eval, Module 1
 
-> Module 1 · First Eval Lab · repo file `01-evaluation-strategy/eval-harness-proof.md`
+> Repo file `ai-evals/01-evaluation-strategy/eval-harness-proof.md`. The eval evidence behind the **Eval Results** slide of the final pitch deck (Module 6).
 >
-> This lives in your `ai-evals` repo (the repo is your submission). It's the eval evidence behind the **Eval Results** slide of the final pitch deck you assemble in Module 6.
->
-> How you wired your first eval harness — an LLM-as-a-Judge running over a dataset — and beat the cold start by seeding a starter dataset. Capture the **setup and your definition of "good"** here; the full scored run against a curated golden set comes later. In Module 1 you *wire* the harness — you won't get a score yet (the dataset is near-empty), and that's expected. The first scored run comes in Module 2.
+> Fill this with the **First Eval Lab** builder, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
 
-## Version A — Concise (system prompt used)
+## Version A, Concise, system prompt used
 
-```text
-You are an executive briefing assistant.
-Summarize in exactly 3 bullet points under 60 words. No preamble, no extra text.
-```
+_…_
 
-## Version B — Narrative (system prompt used)
+## Version B, Narrative, system prompt used
 
-```text
-You are a PR communications assistant.
-Write a 100-word narrative summary highlighting wins first, then risks and next steps. Keep a positive tone. No bullets.
-```
+_…_
 
-## Eval setup — dataset name + judge model/family
+## Eval setup, dataset name + judge model/family
 
-_What dataset are you evaluating, which evaluator/metric, and which model judges it?_
+_e.g. dataset `Module1Output`, Conciseness LLM-as-a-Judge, judge from a different model family than the generator (avoids self-preference bias)._
 
-> Example: dataset `Module1Output`, evaluator `Conciseness (LLM-as-a-Judge)`. Generator = a small model from Provider X; **judge = a small model from a different family (Provider Y)** to avoid self-preference bias.
+## Cold-start, the prompt you used to seed a starter dataset
 
-## Cold-start — the prompt you used to seed a starter dataset
+_Paste the prompt you gave ChatGPT to generate ~20 example rows._
 
-_You don't have production data yet. Paste the prompt you gave a chatbot to generate ~20 example rows so you can start evaluating today._
+## Your definition of good vs bad (golden-set criteria) — the graded part, write your own
 
-> Example: "Generate 20 example rows for evaluating email-summary quality. Each row: input email + candidate summary + a first-pass label (good/bad) + one-line reason. Make ~half concise/faithful (good) and half verbose or inaccurate (bad). Return as a markdown table."
+_What makes a summary genuinely good or bad for THIS product? This is the judgment call that's yours — don't copy the example._
 
-## Your definition of good vs bad (golden-set criteria)
+## Screenshots, links or repo paths (optional if you followed the demo)
 
-_This rubric is the whole point — the judge only scores against what you decide "good" means._
-
-> Example: **Good** = faithful to the email, no invented facts, ≤60 words, decision-ready for a CEO. **Bad** = adds claims not in the source, buries the key number, or rambles past 100 words.
-
-## Screenshots — links or repo paths (optional if you followed the live demo)
-
-_Two screenshots: (1) your eval setup showing the dataset + judge, (2) your starter dataset rows. Paste image links, or commit images under `01-evaluation-strategy/screenshots/` and reference the path._
-
-| What it shows | Screenshot / link |
-|---|---|
-| Eval setup (dataset + judge) | _…_ |
-| Starter dataset rows | _…_ |
-
----
-
-_Self-review: Is your judge from a **different model family** than the generator? Does your "good vs bad" rubric describe the product outcome, not just formatting? Could a teammate re-run this from your notes alone?_
+_2 shots: (1) eval setup (dataset + judge), (2) starter rows. Image links, or paths under `01-evaluation-strategy/screenshots/`._

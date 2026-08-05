@@ -1,47 +1,42 @@
-# Eval Spec
+# M3 · Lab 2 · Eval Spec, Ascend IQ P0
 
-> Module 3 · Eval Suites · repo file; backs the Eval Results slide of your final pitch deck
+> Repo file `ai-evals/03-eval-suites/lab-2-eval-spec.md`. The PM's contract for what "good" means and how it's enforced.
 >
-> The design of your automated evaluation suite: the datasets, evaluators, and pass criteria that turn your taxonomy into a repeatable test.
+> Fill this with the **Eval Spec Builder** tool, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
 
-## 1. Datasets
+## Part 1 · The 5-Part Eval Spec
 
-_What examples does the suite run against, and where do they come from?_
+| Question | Answer |
+|---|---|
+| **01 · Target Risk** | _…_ |
+| Risk Type | _Output / Trajectory_ |
+| Trust Metric | _Hallucination / UX Trust / Robustness / Fairness / Latency_ |
+| **02 · Evaluator** | _Code-Based / Per-turn Classifier / LLM-as-Judge / Human Eval / Hybrid_ |
+| Detection logic | _…_ |
+| **03 · Threshold** | _a number — e.g. 100% accuracy · ±0.5% · tone ≥ 4/5 · κ ≥ 0.6_ |
+| Strategy | _Safety First (max TPR) / Growth First (max TNR) / Balanced_ |
+| **04 · Business Stakes** | _…_ |
+| **05 · Owner** | _…_ |
 
-| Dataset | Purpose | # examples | Source |
-|---|---|---|---|
-| _Golden set_ | _known-good reference cases_ | _…_ | _…_ |
-| _Failure set_ | _cases that previously broke_ | _…_ | _…_ |
-| _Edge set_ | _adversarial / rare inputs_ | _…_ | _…_ |
+## Trajectory fields
 
-## 2. Evaluators
+_Only if Risk Type = Trajectory. Otherwise delete this section._
 
-_One row per evaluator. Tie each back to a failure mode from Module 2._
+| Field | Answer |
+|---|---|
+| Dimensions scored | _e.g. Tool selection, Argument correctness, Task completion_ |
+| Matching mode | _Strict / Unordered / Subset / Superset_ |
 
-| Evaluator | Type (code / LLM-judge / human) | Failure mode it catches | Output (score / pass-fail) |
-|---|---|---|---|
-| _…_ | _…_ | _…_ | _…_ |
+## Part 2 · Three Audience Messages
 
-## 3. LLM-as-judge prompts (if used)
+### A. For Engineering (Jira ticket)
 
-_Paste the judge prompt(s). Note how you calibrated them against human labels._
+_Acceptance criteria in IF/THEN (GIVEN/WHEN/THEN) form — not vibes._
 
-```
-[judge prompt here]
-```
+### B. For UX / Design
 
-## 4. Pass criteria
+_The fallback experience when the gate blocks a response._
 
-_What score/threshold per evaluator counts as a pass? What's the aggregate bar for the suite?_
+### C. For Leadership (bi-weekly update)
 
-## 5. How to run it
-
-_Commands / steps to reproduce the suite (LangSmith experiment, script, etc.)._
-
-## 6. Baseline results
-
-_First run of the suite against current production. Where does it stand today?_
-
-| Evaluator | Score | Pass? |
-|---|---|---|
-| _…_ | _…_ | _…_ |
+_One ROI bullet: risk avoided + coverage + what you're tracking._

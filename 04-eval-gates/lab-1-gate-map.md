@@ -1,37 +1,29 @@
-# Eval Gates & Thresholds
+# Module 4 · Eval Gate Map · Ascend IQ Copilot
 
-> Module 4 · Eval Gates · repo file; feeds the Eval Gates slide of your final pitch deck
+> Repo file `ai-evals/04-eval-gates/lab-1-gate-map.md`. Becomes the **Eval Gates** slide of the final pitch deck (Module 6).
+> Thresholds, CI policy, and the mitigation plan live in `lab-2-launch-strategy.md`; the CI replay demo lives in `lab-ci-gate-policy.md`.
 >
-> Where your eval suite plugs into the delivery lifecycle, and the thresholds that decide ship / hold.
+> Fill this with the **Eval Gate Mapping Tool**, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly. End with **≥1 Hard, ≥1 Soft, ≥1 Advisory**.
 
-## 1. Gate placement
+## Context
 
-_Where in the lifecycle does each gate sit, and what does it block?_
+_The 5 verified failures Eng flagged in the Ascend IQ data log. Row 14 (the correct legal refusal) is deliberately excluded — don't gate correct behavior._
 
-| Gate | Lifecycle stage (PR / pre-deploy / canary / prod monitor) | What it blocks |
-|---|---|---|
-| _…_ | _…_ | _…_ |
+## Gate Map
 
-## 2. Thresholds
+| Row | Failure Mode | Severity | Placement | Rationale |
+|---|---|---|---|---|
+| 01 | _…_ | _Advisory / Soft / Hard_ | _PR / Staging / Release_ | _…_ |
+| 17 | _…_ | _Advisory / Soft / Hard_ | _PR / Staging / Release_ | _…_ |
+| 05 | _…_ | _Advisory / Soft / Hard_ | _PR / Staging / Release_ | _…_ |
+| 08 | _…_ | _Advisory / Soft / Hard_ | _PR / Staging / Release_ | _…_ |
+| 03 | _…_ | _Advisory / Soft / Hard_ | _PR / Staging / Release_ | _…_ |
 
-_The exact pass bar at each gate. Be specific, these are the numbers a release rides on._
+## Sample Interactions (for reference)
 
-| Metric | Gate | Threshold | If it fails… |
-|---|---|---|---|
-| _…_ | _…_ | _…_ | _block / warn / rollback_ |
+**Row 01 · _failure short name_**
+- Input: _…_
+- Output: _…_
+- Eng reasoning: _…_
 
-## 3. Human-in-the-loop
-
-_Which decisions require a human, and who is that human? What do they see?_
-
-## 4. Launch strategy
-
-_How do you roll out behind these gates? (shadow → canary % → full). What signal promotes each stage?_
-
-## 5. Rollback & kill-switch
-
-_What triggers a rollback, and how fast can you pull the feature?_
-
-## 6. Trade-off justification
-
-_Why these thresholds? What's the cost of too-strict (blocks good releases) vs too-loose (ships failures)?_
+_(…one block per row…)_

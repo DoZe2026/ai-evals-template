@@ -1,23 +1,27 @@
-# Judge Calibration (κ)
+# Lab, Judge Calibration (Ascend IQ grounding rubric)
 
-> Module 3 · Eval Suites · repo file; the "can we trust the judge?" evidence behind your Eval Results slide
+> Repo file `ai-evals/03-eval-suites/lab-judge-calibration.md`. Extra practice (async). Label the 12 Ascend IQ grounding traces, compute κ, and revise the rubric until **κ ≥ 0.60**.
 >
-> An LLM-as-a-Judge is only useful if it agrees with a human. This captures how well your judge matches your own labels, measured with Cohen's κ.
+> Fill this with the **Judge Calibration** tool, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
 
-## Calibration run
+**Cohen's κ:** _0.00_ (_interpretation_) — _PASSES / FAILS the κ ≥ 0.60 gate_
 
-- **Sample size (labeled cases):** _…_
-- **Cohen's κ (judge vs your labels):** _target ≥ 0.6_
-- **Family separation check:** _judge model ≠ model under test, to avoid self-preference bias_
+- Traces labeled: _…/12_
+- Raw agreement p₀: _…%_
+- Chance agreement pₑ: _…%_
+- Disagreements: _…_
 
-## Disagreements
+### Confusion matrix (judge × you)
 
-_Where did the judge and your labels diverge? What pattern explains it?_
+| | You: PASS | You: FAIL |
+|---|---|---|
+| **Judge: PASS** | _…_ | _…_ |
+| **Judge: FAIL** | _…_ | _…_ |
 
-| Case | Your label | Judge label | Why they differed |
-|---|---|---|---|
-| _…_ | _…_ | _…_ | _…_ |
+## Diagnosis
 
-## Rubric changes
+_e.g. The judge passed 2 verbose answers that padded with unsourced detail — it's rewarding length, not grounding._
 
-_What you changed in the judge prompt / rubric to raise κ, and the κ before vs after._
+## Rubric revision
+
+_e.g. Add an explicit rule: "Any claim not traceable to the retrieved source = FAIL, regardless of fluency." Add a one-shot example of a fluent-but-ungrounded fail, then re-measure κ._

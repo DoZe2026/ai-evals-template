@@ -1,39 +1,35 @@
-# Governance at Scale
+# Lab 1, Ascend Analytics Coverage Matrix
 
-> Module 5 · Scale · repo file; the closed-loop and scaling evidence behind your Ship/Hold slide
+> Repo file `ai-evals/05-scale/lab-1-coverage-matrix.md`. Feeds the **Coverage / scale** slide of the final pitch deck (Module 6).
 >
-> How the eval system survives contact with reality: coverage, cost, ownership, and drift over time.
+> Fill this with the **Coverage Matrix Tool**, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly. **Force ≥2 ❌ gaps** — an all-green matrix isn't real.
 
-## 1. Coverage matrix
+**Product:** _…_
 
-_Which failure modes / dimensions are covered by automated evals, and where are the gaps?_
+## Coverage row
 
-| Dimension / failure mode | Covered by | Gap? |
-|---|---|---|
-| _…_ | _eval / gate / manual_ | _…_ |
+| Product | Hallucination | Bias | Latency | Toxicity | Drift Monitoring |
+|---|---|---|---|---|---|
+| _…_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ |
 
-## 2. Cost & budget
+## Method + Ground Truth (two ✅/⚠️ cells)
 
-_What do the evals cost to run (tokens, time, human review)? How do you keep it sustainable?_
+### _Risk name 1_
+- **Method:** _how you evaluate it_
+- **Ground truth:** _what you grade against_
 
-- **Per-run cost:** _…_
-- **Run frequency:** _…_
-- **Budget trade-offs:** _what you'd cut first under a budget crisis, and why_
+### _Risk name 2_
+- **Method:** _how you evaluate it_
+- **Ground truth:** _what you grade against_
 
-## 3. Ownership
+## Strategic acceptance
 
-_Who owns the eval suite, the thresholds, and the on-call when a gate fires?_
+**Accepted gap:** _which ❌ you're accepting_
 
-| Responsibility | Owner |
-|---|---|
-| Eval suite maintenance | _…_ |
-| Threshold changes | _…_ |
-| Incident response | _…_ |
+> _Why it's an acceptable risk right now + the kill criterion / date that would change the call._
 
-## 4. Drift & maintenance
+## Critical mitigation
 
-_How do you detect when evals go stale (model updates, data shift)? What's the review cadence?_
-
-## 5. Scaling plan
-
-_How does this extend to more features / teams without becoming a bottleneck?_
+- **Critical gap:** _the ❌ you cannot accept_
+- **Why critical:** _…_
+- **Mitigation plan:** _concrete plan with a date/owner — not "we'll add it later"._

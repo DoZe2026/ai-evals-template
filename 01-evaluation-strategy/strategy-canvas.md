@@ -1,48 +1,34 @@
-# Evaluation Strategy Canvas
+# AI Evaluation Strategy Canvas
 
-> Module 1 · Evaluation Strategy · repo file; feeds the Strategy Canvas slide of your final pitch deck
+> Repo file `ai-evals/01-evaluation-strategy/strategy-canvas.md` (the repo is your submission).
+> Becomes the **Strategy Canvas** slide of the final pitch deck you assemble in Module 6.
 >
-> The one-page bet that frames everything else: what you're evaluating, why it matters, and what "good enough to ship" means.
-> This is a living document, fill in what you can now and refine it as the course progresses.
+> Fill this with the **AI Evaluation Strategy Canvas** tool, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
 
-## 1. The feature under evaluation
+## 1. Product Strategy, The Context
 
-_What LLM-powered feature are you evaluating? Describe the input, the output, and the user._
+- **Target user:** _…_
+- **Key use case:** _…_
+- **Value proposition:** _…_
 
-- **Input:** _What does the user (or system) provide?_
-- **Output:** _What does the feature produce?_
-- **User & job-to-be-done:** _Who relies on it, and for what?_
+## 2. Measurements, The Execution
 
-## 2. Why evals: the cost of being wrong
+- **User promise.** _For [user], [product] promises to [outcome] so that [business value]._
+- **Top 3 trust metrics:**
+  - **_Metric 1_**, _definition / measurable signal_
+  - **_Metric 2_**, _definition / measurable signal_
+  - **_Metric 3_**, _definition / measurable signal_
+- **Why these three:** _…_
 
-_What happens when this feature fails silently? (e.g. wrong answer ships, trust erodes, compliance risk.)_
+## 3. Strategic Trade-Offs, The Cost
 
-## 3. Quality dimensions
+### Trade-off 1 · _Metric A ↔ Metric B_
 
-_Which dimensions actually matter here, and how do you weight them?_
+_We prioritize A over B because … (business justification)._
 
-| Dimension | Why it matters | How you'd measure it |
-|---|---|---|
-| _Correctness / faithfulness_ | _…_ | _…_ |
-| _Safety / policy_ | _…_ | _…_ |
-| _Tone / format_ | _…_ | _…_ |
+### Trade-off 2 · _Metric C ↔ Metric D_
 
-## 4. Evaluator strategy
+_We prioritize C over D because … (business justification)._
 
-_For each dimension: human review, code/heuristic check, or LLM-as-judge? Why?_
-
-| Dimension | Evaluator type | Rationale |
-|---|---|---|
-| _…_ | _human / code / LLM-judge_ | _…_ |
-
-## 5. "Good enough to ship": the bar
-
-_What threshold per dimension makes this shippable? What's the non-negotiable floor?_
-
-## 6. Risks & unknowns
-
-_What might this canvas be wrong about? What will you learn in Module 2's failure discovery?_
-
-## Link to full artifact
-
-_[link / screenshot]_
+---
+_Generated from the AI Evaluation Strategy Canvas, M1 lab tool, AI Evals Certification._

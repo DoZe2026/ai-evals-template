@@ -1,21 +1,23 @@
-# Launch Strategy
+# Module 4 · Launch Strategy · Section 4.0 Release Criteria
 
-> Module 4 · Eval Gates · repo file; the rollout plan behind your Eval Gates slide
+> Repo file `ai-evals/04-eval-gates/lab-2-launch-strategy.md`. Your PRD's release-criteria section: the numeric thresholds, the CI gate policy, and the mitigation lever for the Soft gate.
 >
-> How the gate policy in `lab-1-gate-map.md` translates into a safe release: staged rollout, monitoring, and the conditions under which you'd roll back.
+> Fill this with the **Launch Strategy Builder** tool, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
 
-## Rollout stages
+## 4.0 Release Criteria
 
-| Stage | Audience / % traffic | Gate that must pass to advance | Monitoring signal |
-|---|---|---|---|
-| _e.g. internal_ | _…_ | _…_ | _…_ |
-| _e.g. canary_ | _…_ | _…_ | _…_ |
-| _e.g. GA_ | _…_ | _…_ | _…_ |
+| Severity | Metric | Threshold | Dataset | Method |
+|---|---|---|---|---|
+| Hard | _…_ | _e.g. = 0%_ | `Ascend_IQ_Logs` | _…_ |
+| Soft | _…_ | _e.g. < 2%_ | `Ascend_IQ_Logs` | _[Example Spec]_ |
+| Advisory | _…_ | _e.g. tone ≥ 4/5_ | `Ascend_IQ_Logs` | _[Example Spec]_ |
 
-## Rollback triggers
+## 4.1 CI Gate Policy
 
-_What live signal (per-dimension regression, incident, threshold breach) forces a hold or rollback, and who makes the call?_
+> _Which per-dimension regression blocks the merge vs warns, referencing a regression golden set ≥ 30. Policy is per-dimension — never one blended "quality" number. Use deterministic fixtures/replay, not live model calls._
 
-## Risk tolerance
+## 4.2 Mitigation Plan · Soft Gate
 
-_Which dimensions block a launch outright vs. warn-and-proceed, and why that's acceptable for this feature._
+**Selected Lever:** _Staged Rollout / Feature Flagging / Beta Labeling / Delay Launch_
+
+> _One sentence: how this lever contains the Soft-gate risk while you ship._

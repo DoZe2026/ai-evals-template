@@ -1,20 +1,25 @@
-# Trajectory Eval — Scorecard
+# Lab, Trajectory Eval (Ascend IQ usage-drop task)
 
-> Module 3 · Eval Suites · repo file; the path-quality evidence behind your Eval Results slide
+> Repo file `ai-evals/03-eval-suites/lab-1b-trajectory.md`. Grade the agent's **path**, not just the final answer.
 >
-> For agentic features, a correct-looking answer can still come from a broken path. Score the path the agent took, not just the final answer. (Judge agreement / κ lives in `lab-judge-calibration.md`.)
+> Fill this with the **Trajectory Eval Lab** tool, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
+>
+> **More paths to practice on:** `trajectory-traces.csv` (same folder) holds six richer recorded trajectories — a golden reference plus five with distinct failure modes (redundant loops, a hallucinated tool, wrong-order drafting, wrong-argument calls, off-scope steps). Grade any of them with the same rubric.
 
-## Trajectory scorecard
+**Matching mode:** _strict / unordered / subset / superset_ (default to **unordered** — strict is over-used)
+**Score:** _…/6_ · **Verdict:** _SHIP / HOLD_
 
-_Use the six dimensions from the Trajectory Eval Lab._
+## Dimension scores
 
-| Dimension | What you checked | Pass / Fail | Note |
-|---|---|---|---|
-| _e.g. tool use_ | _…_ | _…_ | _…_ |
-| _e.g. reasoning loop_ | _…_ | _…_ | _…_ |
-| _e.g. scope / permissions_ | _…_ | _…_ | _…_ |
-| _e.g. recovery_ | _…_ | _…_ | _…_ |
+| Dimension | Score | Note |
+|---|---|---|
+| Tool selection | _PASS / PARTIAL / FAIL_ | _…_ |
+| Argument correctness | _PASS / PARTIAL / FAIL_ | _…_ |
+| No redundant / looping steps | _PASS / PARTIAL / FAIL_ | _…_ |
+| Recovery | _PASS / PARTIAL / FAIL_ | _…_ |
+| Plan coherence | _PASS / PARTIAL / FAIL_ | _…_ |
+| Task completion | _PASS / PARTIAL / FAIL_ | _…_ |
 
-## What the path tells you
+## Verdict
 
-_Where the agent went wrong even when the output looked fine, and what your eval suite must catch as a result._
+_e.g. HOLD — the reply sounds plausible, but the agent skipped the ingestion check and the week-over-week compare (task completion fail), so the "seasonal" cause is unverified. A passing-looking answer does not excuse a failed path on a P0._
