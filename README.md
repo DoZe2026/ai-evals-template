@@ -4,7 +4,7 @@
 
 This is a **template repo**. Click **Use this template → Create a new repository**, name it `ai-evals` (or `<your-feature>-evals`), and fill in one folder per module as you go. The repo URL is your submission.
 
-> **Tools & cost.** The eval platform is **free** — LangSmith's Developer tier (5,000 traces/month) needs **no credit card**. The only real cost is **model usage** (OpenAI or Claude), typically a few cents for the whole course. If your IT blocks LangSmith, **promptfoo** (open-source, no signup, runs locally) is a supported fallback, or follow the instructor's live demo and still complete the written artifacts. Keep model keys in a gitignored `.env`, never commit them.
+> **Tools & cost.** No eval platform, no signup, no credit card. **Module 1 has no notebook.** Compare Version A and Version B in any chat (ChatGPT, Claude, or Gemini) and record the proof in `01-evaluation-strategy/eval-harness-proof.md`. The only runnable notebook is the **Module 3 Cortex lab**, [`03-eval-suites/cortex-eval/eval_lab.ipynb`](03-eval-suites/cortex-eval/). It scores recorded Cortex traces. It does not compare prompt versions on Ascend IQ. Layers 1 and 2 and the Cohen's κ math run with **no key at all**. Only the Layer 3 judge calls OpenAI (`OPENAI_API_KEY`, default model `gpt-4o-mini`), typically a few cents. If your fork does not have that folder, download it from the content library when you reach Module 3 (links are in the Module 1 pre-read). Prefer a dashboard? LangSmith, Braintrust, or Phoenix are optional. Keep model keys in a gitignored `.env`, never commit them. Copy `env.example.txt` to `.env` (same contents as `.env.example`).
 
 ---
 
@@ -39,7 +39,7 @@ _What LLM feature are you evaluating, who relies on it, and what is the cost of 
 **The guided way (recommended): paste the module's `LAB.md` into your AI assistant.**
 Each module folder ships a **`LAB.md`** runbook written *for your assistant* (ChatGPT, Claude,
 Gemini, Cursor, Claude Code, Codex). Paste it in and it walks you through the module's labs one step
-at a time — asking your decisions, telling you exactly what to run in LangSmith/promptfoo, and writing
+at a time, asking your decisions, telling you exactly which cells (or commands) to run, and writing
 each deliverable file for you to commit.
 
 | Module | Paste this into your assistant | Writes |
