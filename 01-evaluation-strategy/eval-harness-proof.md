@@ -51,4 +51,8 @@ _…_#	Input email	Candidate summary	Label	Reason
 
 ## Screenshots, links or repo paths (optional if you followed the demo)
 
-_…_
+<img width="509" height="304" alt="image" src="https://github.com/user-attachments/assets/b1163e01-8c51-4170-a0e8-d5db1635083d" />
+
+<img width="554" height="344" alt="image" src="https://github.com/user-attachments/assets/a133a02a-c680-495a-9534-9a9b86e96a20" />
+
+
