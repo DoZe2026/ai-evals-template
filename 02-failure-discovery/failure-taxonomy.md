@@ -1,3 +1,17 @@
+# Failure Taxonomy · Ascend IQ
+
+## Top 3 Prioritized Failures
+
+| Rank | Failure | Trust Tag | Frequency | Severity |
+|---|---|---|---|---|
+| 1 | Inverted competitor benchmark	 | #HALLUCINATION | 9/20, HIGH | P0 |
+| 2 | Overstated integration | #HALLUCINATION | 9/20, HIGH | P2 |
+| 3 | Missed compliance check | #ROBUSTNESS | 1/20, LOW | P1 |
+
+## #1 Risk · Business Impact
+
+Competitor Z is “twice as fast” at 1000 req/min, yet the agent says Z throttles. A VP could build positioning or a sales pitch on a claim a buyer can disprove.
+
 # Failure Taxonomy Canvas · Ascend IQ
 
 > Repo file `ai-evals/02-failure-discovery/failure-taxonomy.md`. Becomes the **Failure Taxonomy** slide of the final pitch deck (Module 6) and feeds the Module 3 eval suite.
