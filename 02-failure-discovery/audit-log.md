@@ -1,3 +1,30 @@
+# Ascend IQ Failure Audit
+
+10 confirmed failures: #HALLUCINATION ×9, #UX_TRUST ×0, #ROBUSTNESS ×1, #FAIRNESS ×0. I changed 2 of the judge’s calls.
+
+| Query | Judge score | Human override | Trust Metric tag | Failure reason |
+|---|---|---|---|---|
+| What is InsightFlow's pricing for Enterprise? | 0 | 1, The answer gives the old $49 price, which is outdated, since the reference says “New Price (Updated yesterday): $59/mo.” |  | The answer gives the outdated price (and an unsupported 10-seat minimum), while the reference shows "New Price (Updated yesterday): $59/mo." |
+| Summarize the top 3 complaints from DataViz's G2 reviews. | 1 |  |  |  |
+| Does InsightFlow support native SQL export? | 0 |  | #HALLUCINATION | The answer says "Yes" to native SQL export and leaves out that the reference states "there is no 'Native Export' button in the UI." |
+| List the confirmed speakers for SaaStr. | 0 |  | #HALLUCINATION | The answer lists Sam Altman as confirmed, but the reference says he is "listed as 'Invited/Tentative.'" |
+| What is the sentiment of the latest TechCrunch article on us? | 0 |  | #HALLUCINATION | The answer overstates the sentiment as fully positive and adds an unsupported pricing criticism, while the reference only says "Sentiment: Neutral/Positive." |
+| Give me a bio for Sarah Jenkins, the new VP at DataViz. | 0 |  | #HALLUCINATION | The answer understates her prior title as "Director," but the reference says "Prev: Sr. Director @ Salesforce." |
+| Compare our API rate limits to Competitor Z. | 0 |  | #HALLUCINATION | The answer implies Competitor Z is more restrictive, but the reference says "Us: 500 req/min. Competitor Z: 1000 req/min (Twice as fast)." |
+| Is Competitor X SOC2 compliant? | 0 |  | #ROBUSTNESS | The agent says it can't find compliance information, but the reference shows a "'SOC2 Type II Certified' badge visible." |
+| When was InsightFlow's last funding round? | 0 |  | #HALLUCINATION | The answer adds "Series B," which is not supported by the reference, which states only "March 15, 2023. Amount: $45M." |
+| Who is the CEO of DataViz? | 1 |  |  |  |
+| Does Competitor Y integrate with HubSpot? | 0 |  | #HALLUCINATION | The answer calls it a "seamless integration" and omits that it is indirect: "HubSpot integration available via Zapier partnership." |
+| What are the primary brand colors for InsightFlow? | 0 |  | #HALLUCINATION | The answer presents Charcoal as primary and adds an unsupported hex code, but the reference says "Primary: Electric Blue. Secondary: Charcoal." |
+| Summarize the lawsuit mentioned in the WSJ about Competitor Z. | 1 |  |  |  |
+| List the HQ locations for DataViz. | 0 |  | #HALLUCINATION | The answer lists Austin as an HQ, but the reference says "HQ: San Francisco. Engineering Hub: Austin." |
+| How many employees does InsightFlow have? | 1 |  |  |  |
+| Draft a cold email about our new feature. | 0 | 1, No facts are wrong, but the slang (“killer,” “game changer”) breaks the brand voice “Confident, professional, expert. Avoid slang,” which fits a tone failure rather than #HALLUCINATION. |  | The draft uses slang ("killer," "game changer") that violates the brand voice "Tone: Confident, professional, expert. Avoid slang." |
+| Does Competitor X offer 24/7 support? | 1 |  |  |  |
+| What database backend does DataViz use? | 1 |  |  |  |
+| Summarize the latest release notes for InsightFlow. | 1 |  |  |  |
+| What is the market cap of Competitor Z? | 1 |  |  |  |
+
 # Ascend IQ Failure Audit, Module 2
 
 > Repo file `ai-evals/02-failure-discovery/audit-log.md` (your raw scored rows). Feeds `failure-taxonomy.md`.
